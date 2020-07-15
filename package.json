@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node db-setup.js && next start",
+    "start": "node db-setup.js && next start"
   },
   "dependencies": {
     "@zeit/next-less": "^1.0.1",
