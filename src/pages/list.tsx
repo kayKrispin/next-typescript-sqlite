@@ -27,7 +27,7 @@ export default function ListPage({ ownersList }: ListProps) {
           footer={<div>Footer</div>}
           bordered
           dataSource={ownersList.data}
-          renderItem={item => <List.Item>{item.first_name}</List.Item>}
+          renderItem={(item:Person)=> <List.Item>{item.first_name}</List.Item>}
       />
     </div>
   );
