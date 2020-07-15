@@ -2,12 +2,13 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import { OwnerList } from "../types/OwnerList";
 import { Person } from "../types/Person";
+import { List } from "antd";
 
 export interface ListProps {
   ownersList: OwnerList
 }
 
-export default function List({ ownersList }: ListProps) {
+export default function ListPage({ ownersList }: ListProps) {
 
   return (
     <div>
@@ -20,6 +21,14 @@ export default function List({ ownersList }: ListProps) {
           </Link>
         </div>
       ))}
+      <List
+          size="large"
+          header={<div>Header</div>}
+          footer={<div>Footer</div>}
+          bordered
+          dataSource={ownersList.data}
+          renderItem={item => <List.Item>{item.first_name}</List.Item>}
+      />
     </div>
   );
 }
