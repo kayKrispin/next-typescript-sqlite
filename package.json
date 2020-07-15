@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node db-setup.js && next build",
     "start": "node db-setup.js && next start"
   },
   "dependencies": {
